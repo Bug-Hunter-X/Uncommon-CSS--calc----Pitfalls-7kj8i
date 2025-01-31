@@ -1,0 +1,21 @@
+/* bugSolution.css */
+
+/* Correct handling of units within calc() */
+.container {
+  width: 500px; /* Explicitly defined width for calc() to work predictably */
+}
+
+.element {
+  width: calc(100% - 20px); /* Ensures correct subtraction */
+}
+
+/* Correct order of operations using parentheses */
+.element2 {
+  width: calc((100% - 20px) / 2); /* Calculation is performed correctly */
+}
+
+/* Addressing potential browser compatibility */
+.element3 {
+  width: calc(100% - 20px); /* Modern browsers handle this correctly */
+  width: 480px; /* Fallback for older browsers that don't support calc() */
+} 
